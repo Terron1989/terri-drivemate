@@ -1,0 +1,62 @@
+<DriveMate>:
+    orientation: "vertical"
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: "TERRI DRIVEMATE"
+        font_size: 28
+        size_hint_y: None
+        height: 50
+
+    TextInput:
+        id: destination
+        hint_text: "Destination"
+        multiline: False
+
+    TextInput:
+        id: start_km
+        hint_text: "Start km"
+        input_filter: "float"
+        multiline: False
+
+    TextInput:
+        id: end_km
+        hint_text: "End km"
+        input_filter: "float"
+        multiline: False
+
+    TextInput:
+        id: fuel_price
+        hint_text: "Fuel price per litre e.g. 25"
+        input_filter: "float"
+        multiline: False
+
+    TextInput:
+        id: km_per_litre
+        hint_text: "Vehicle km per litre e.g. 10"
+        input_filter: "float"
+        multiline: False
+
+    TextInput:
+        id: notes
+        hint_text: "Trip notes"
+        multiline: False
+
+    Button:
+        text: "SAVE TRIP"
+        size_hint_y: None
+        height: 55
+        on_press: root.add_trip()
+
+    Button:
+        text: "OPEN WAZE"
+        size_hint_y: None
+        height: 55
+        on_press: root.open_waze()
+
+    Label:
+        text: root.status
+        font_size: 18
+        size_hint_y: None
+        height: 60
